@@ -27,10 +27,10 @@ final class AVCaptureSessionCameraPreview {
         position = source.toPosition()
     }
     
-    func configureInputAndOutput(completion: (Error?) -> Void) {
+    func configureInputAndOutput() throws {
         removeInputAndOutput()
-        addInput(completion: completion)
-        addOutput(completion: completion)
+        try addInput()
+        try addOutput()
     }
     
     func start() {
@@ -51,19 +51,18 @@ final class AVCaptureSessionCameraPreview {
 // MARK: - Helpers
 
 extension AVCaptureSessionCameraPreview {
-    private func addInput(completion: (Error?) -> Void) {
+    private func addInput() throws {
         guard let device = AVCaptureDevice.DiscoverySession(deviceTypes: deviceTypes,
                                                             mediaType: .video,
                                                             position: position).devices.first,
               let input = try? AVCaptureDeviceInput(device: device) else {
-            completion(NSError(domain: "Error when creating device input", code: 0))
-            return
+            throw NSError(domain: "Error when creating device input.", code: 0)
         }
         
         if captureSession.canAddInput(input) {
             captureSession.addInput(input)
         } else {
-            completion(NSError(domain: "Error when adding input", code: 0))
+            throw NSError(domain: "Error when adding input.", code: 0)
         }
     }
     
@@ -73,14 +72,14 @@ extension AVCaptureSessionCameraPreview {
         }
     }
     
-    private func addOutput(completion: (Error?) -> Void) {
+    private func addOutput() throws {
         let output = AVCaptureVideoDataOutput()
         output.videoSettings = [(kCVPixelBufferPixelFormatTypeKey as NSString): NSNumber(value: kCVPixelFormatType_32BGRA)] as [String: Any]
         
         if captureSession.canAddOutput(output) {
             captureSession.addOutput(output)
         } else {
-            completion(NSError(domain: "Error when adding output", code: 0))
+            throw NSError(domain: "Error when adding output.", code: 0)
         }
     }
     
