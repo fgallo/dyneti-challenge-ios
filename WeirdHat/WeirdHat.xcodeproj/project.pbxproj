@@ -15,6 +15,7 @@
 		4F4292FB2A4DE04C00F66569 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4292F92A4DE04C00F66569 /* LaunchScreen.storyboard */; };
 		4F4293062A4DE04C00F66569 /* WeirdHatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4293052A4DE04C00F66569 /* WeirdHatTests.swift */; };
 		4FC64C012A4E2E5100F5C0A3 /* AVCaptureSessionCameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C002A4E2E5100F5C0A3 /* AVCaptureSessionCameraPreview.swift */; };
+		4FC64C042A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C032A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		4F4293012A4DE04C00F66569 /* WeirdHatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeirdHatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4293052A4DE04C00F66569 /* WeirdHatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeirdHatTests.swift; sourceTree = "<group>"; };
 		4FC64C002A4E2E5100F5C0A3 /* AVCaptureSessionCameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureSessionCameraPreview.swift; sourceTree = "<group>"; };
+		4FC64C032A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeirdHatCameraUIComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		4FC64C022A4E2E9100F5C0A3 /* Camera Preview UI */ = {
 			isa = PBXGroup;
 			children = (
+				4FC64C032A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift */,
 				4F4292F22A4DE04B00F66569 /* WeirdHatCameraViewController.swift */,
 			);
 			path = "Camera Preview UI";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FC64C012A4E2E5100F5C0A3 /* AVCaptureSessionCameraPreview.swift in Sources */,
+				4FC64C042A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift in Sources */,
 				4F4292F32A4DE04B00F66569 /* WeirdHatCameraViewController.swift in Sources */,
 				4F4292EF2A4DE04B00F66569 /* AppDelegate.swift in Sources */,
 				4F4292F12A4DE04B00F66569 /* SceneDelegate.swift in Sources */,
