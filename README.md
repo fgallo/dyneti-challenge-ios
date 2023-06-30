@@ -3,6 +3,9 @@
 - Optional Bonus I: Include some UI to teach the user how to use the app. ✔️
 - Optional Bonus II: Include face detection and surface the hat image in the proper location only when a face is detected. ✔️
 
+## Video Presentation
+🔗 [Download Video Presentation](https://drive.google.com/file/d/1lYoF8FL7HMjZnBmlSgTD7YEDllZ8d53i/view?usp=share_link)
+
 
 ## Design
 I've created a very simple design, the app consists of two screens:
