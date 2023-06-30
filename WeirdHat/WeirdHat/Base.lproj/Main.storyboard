@@ -17,50 +17,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzd-cL-2rf">
-                                <rect key="frame" x="0.0" y="696" width="393" height="156"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS9-bZ-yad">
-                                        <rect key="frame" x="171.66666666666666" y="48" width="49.666666666666657" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="ZYL-oF-ny4"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <imageReference key="image" image="circle.inset.filled" catalog="system" symbolScale="large"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="takePictureButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3kP-hZ-tw1"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKl-uY-H5V">
-                                        <rect key="frame" x="297.33333333333331" y="60.666666666666629" width="55.666666666666686" height="35"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="arrow.triangle.2.circlepath.camera" catalog="system"/>
-                                        <connections>
-                                            <action selector="flipCameraButttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfk-vz-IOP"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="FKl-uY-H5V" secondAttribute="trailing" constant="40" id="Ae2-eh-lSB"/>
-                                    <constraint firstItem="LS9-bZ-yad" firstAttribute="top" secondItem="hzd-cL-2rf" secondAttribute="top" constant="48" id="LTI-1h-INx"/>
-                                    <constraint firstAttribute="bottom" secondItem="LS9-bZ-yad" secondAttribute="bottom" constant="48" id="PAO-Vy-rF5"/>
-                                    <constraint firstItem="LS9-bZ-yad" firstAttribute="centerX" secondItem="hzd-cL-2rf" secondAttribute="centerX" id="bDr-lR-gsk"/>
-                                    <constraint firstItem="FKl-uY-H5V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LS9-bZ-yad" secondAttribute="trailing" id="hwd-L6-8QD"/>
-                                    <constraint firstItem="FKl-uY-H5V" firstAttribute="centerY" secondItem="LS9-bZ-yad" secondAttribute="centerY" id="pKf-4L-GVD"/>
-                                </constraints>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS9-bZ-yad">
+                                <rect key="frame" x="171.66666666666666" y="783.66666666666663" width="49.666666666666657" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="circle.inset.filled" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="takePictureButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3kP-hZ-tw1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKl-uY-H5V">
+                                <rect key="frame" x="297.33333333333331" y="783.33333333333337" width="55.666666666666686" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.triangle.2.circlepath.camera" catalog="system"/>
+                                <connections>
+                                    <action selector="flipCameraButttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfk-vz-IOP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfU-qI-mhV">
+                                <rect key="frame" x="40" y="783.33333333333337" width="49.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hzd-cL-2rf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vke-yZ-qy5"/>
-                            <constraint firstItem="hzd-cL-2rf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d2N-T4-WOq"/>
-                            <constraint firstAttribute="bottom" secondItem="hzd-cL-2rf" secondAttribute="bottom" id="diZ-MZ-EQ7"/>
+                            <constraint firstItem="LS9-bZ-yad" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="D6T-CE-kaE"/>
+                            <constraint firstItem="LS9-bZ-yad" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F1N-l0-vbl"/>
+                            <constraint firstItem="LS9-bZ-yad" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CfU-qI-mhV" secondAttribute="trailing" id="F4O-Wr-4td"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FKl-uY-H5V" secondAttribute="trailing" constant="40" id="NG0-2L-mdF"/>
+                            <constraint firstItem="LS9-bZ-yad" firstAttribute="centerY" secondItem="CfU-qI-mhV" secondAttribute="centerY" id="QWq-Q7-2Fs"/>
+                            <constraint firstItem="FKl-uY-H5V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LS9-bZ-yad" secondAttribute="trailing" id="bsS-aE-aJX"/>
+                            <constraint firstItem="LS9-bZ-yad" firstAttribute="centerY" secondItem="FKl-uY-H5V" secondAttribute="centerY" id="dYS-NT-a02"/>
+                            <constraint firstItem="CfU-qI-mhV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="mHy-2v-q6a"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="flipCameraButton" destination="FKl-uY-H5V" id="laC-om-2rj"/>
+                        <outlet property="infoButton" destination="CfU-qI-mhV" id="aOW-bu-SBV"/>
+                        <outlet property="takePictureButton" destination="LS9-bZ-yad" id="dik-99-JjD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,6 +68,7 @@
     <resources>
         <image name="arrow.triangle.2.circlepath.camera" catalog="system" width="128" height="93"/>
         <image name="circle.inset.filled" catalog="system" width="128" height="123"/>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
