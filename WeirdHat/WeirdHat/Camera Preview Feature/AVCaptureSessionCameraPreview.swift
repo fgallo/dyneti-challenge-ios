@@ -6,10 +6,10 @@ import Foundation
 import AVFoundation
 
 final class AVCaptureSessionCameraPreview: NSObject {
-    private let captureSession: AVCaptureSession
     private let deviceTypes: [AVCaptureDevice.DeviceType]
     private var position: AVCaptureDevice.Position
     
+    let captureSession: AVCaptureSession
     var lastImageBuffer: CVImageBuffer?
     var onImageCapture: ((CVImageBuffer) -> Void)?
     
@@ -36,15 +36,17 @@ final class AVCaptureSessionCameraPreview: NSObject {
         try addOutput()
     }
     
-    func start() {
+    func start(completion: (() -> Void)? = nil) {
         DispatchQueue.global(qos: .background).async { [weak self] in
             self?.captureSession.startRunning()
+            completion?()
         }
     }
     
-    func stop() {
+    func stop(completion: (() -> Void)? = nil) {
         DispatchQueue.global(qos: .background).async { [weak self] in
             self?.captureSession.stopRunning()
+            completion?()
         }
     }
     

@@ -13,7 +13,6 @@
 		4F4292F62A4DE04B00F66569 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4292F42A4DE04B00F66569 /* Main.storyboard */; };
 		4F4292F82A4DE04C00F66569 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4292F72A4DE04C00F66569 /* Assets.xcassets */; };
 		4F4292FB2A4DE04C00F66569 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4292F92A4DE04C00F66569 /* LaunchScreen.storyboard */; };
-		4F4293062A4DE04C00F66569 /* WeirdHatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4293052A4DE04C00F66569 /* WeirdHatTests.swift */; };
 		4FC64C012A4E2E5100F5C0A3 /* AVCaptureSessionCameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C002A4E2E5100F5C0A3 /* AVCaptureSessionCameraPreview.swift */; };
 		4FC64C042A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C032A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift */; };
 		4FC64C072A4E357200F5C0A3 /* VisionFaceRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C062A4E357200F5C0A3 /* VisionFaceRecognition.swift */; };
@@ -22,6 +21,7 @@
 		4FC64C102A4F19F700F5C0A3 /* HatImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C0F2A4F19F700F5C0A3 /* HatImageController.swift */; };
 		4FC64C122A4F1D0500F5C0A3 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C112A4F1D0500F5C0A3 /* UIViewController+Alert.swift */; };
 		4FC64C172A4F246C00F5C0A3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C162A4F246C00F5C0A3 /* InfoViewController.swift */; };
+		4FC64C1B2A4F3DED00F5C0A3 /* AVCaptureSessionCameraPreviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C1A2A4F3DED00F5C0A3 /* AVCaptureSessionCameraPreviewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,6 @@
 		4F4292FA2A4DE04C00F66569 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F4292FC2A4DE04C00F66569 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F4293012A4DE04C00F66569 /* WeirdHatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeirdHatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F4293052A4DE04C00F66569 /* WeirdHatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeirdHatTests.swift; sourceTree = "<group>"; };
 		4FC64C002A4E2E5100F5C0A3 /* AVCaptureSessionCameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureSessionCameraPreview.swift; sourceTree = "<group>"; };
 		4FC64C032A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeirdHatCameraUIComposer.swift; sourceTree = "<group>"; };
 		4FC64C062A4E357200F5C0A3 /* VisionFaceRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionFaceRecognition.swift; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		4FC64C0F2A4F19F700F5C0A3 /* HatImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatImageController.swift; sourceTree = "<group>"; };
 		4FC64C112A4F1D0500F5C0A3 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		4FC64C162A4F246C00F5C0A3 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		4FC64C1A2A4F3DED00F5C0A3 /* AVCaptureSessionCameraPreviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureSessionCameraPreviewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 		4F4293042A4DE04C00F66569 /* WeirdHatTests */ = {
 			isa = PBXGroup;
 			children = (
-				4F4293052A4DE04C00F66569 /* WeirdHatTests.swift */,
+				4FC64C1A2A4F3DED00F5C0A3 /* AVCaptureSessionCameraPreviewTests.swift */,
 			);
 			path = WeirdHatTests;
 			sourceTree = "<group>";
@@ -304,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4293062A4DE04C00F66569 /* WeirdHatTests.swift in Sources */,
+				4FC64C1B2A4F3DED00F5C0A3 /* AVCaptureSessionCameraPreviewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
