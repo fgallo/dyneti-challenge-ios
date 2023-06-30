@@ -16,6 +16,7 @@
 		4F4293062A4DE04C00F66569 /* WeirdHatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4293052A4DE04C00F66569 /* WeirdHatTests.swift */; };
 		4FC64C012A4E2E5100F5C0A3 /* AVCaptureSessionCameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C002A4E2E5100F5C0A3 /* AVCaptureSessionCameraPreview.swift */; };
 		4FC64C042A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C032A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift */; };
+		4FC64C072A4E357200F5C0A3 /* VisionFaceRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C062A4E357200F5C0A3 /* VisionFaceRecognition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		4F4293052A4DE04C00F66569 /* WeirdHatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeirdHatTests.swift; sourceTree = "<group>"; };
 		4FC64C002A4E2E5100F5C0A3 /* AVCaptureSessionCameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureSessionCameraPreview.swift; sourceTree = "<group>"; };
 		4FC64C032A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeirdHatCameraUIComposer.swift; sourceTree = "<group>"; };
+		4FC64C062A4E357200F5C0A3 /* VisionFaceRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionFaceRecognition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		4F4292ED2A4DE04B00F66569 /* WeirdHat */ = {
 			isa = PBXGroup;
 			children = (
+				4FC64C052A4E353E00F5C0A3 /* Face Recognition Feature */,
 				4FC64BFF2A4E2E3E00F5C0A3 /* Camera Preview Feature */,
 				4FC64C022A4E2E9100F5C0A3 /* Camera Preview UI */,
 				4F4292EE2A4DE04B00F66569 /* AppDelegate.swift */,
@@ -117,6 +120,14 @@
 				4F4292F22A4DE04B00F66569 /* WeirdHatCameraViewController.swift */,
 			);
 			path = "Camera Preview UI";
+			sourceTree = "<group>";
+		};
+		4FC64C052A4E353E00F5C0A3 /* Face Recognition Feature */ = {
+			isa = PBXGroup;
+			children = (
+				4FC64C062A4E357200F5C0A3 /* VisionFaceRecognition.swift */,
+			);
+			path = "Face Recognition Feature";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +233,7 @@
 			files = (
 				4FC64C012A4E2E5100F5C0A3 /* AVCaptureSessionCameraPreview.swift in Sources */,
 				4FC64C042A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift in Sources */,
+				4FC64C072A4E357200F5C0A3 /* VisionFaceRecognition.swift in Sources */,
 				4F4292F32A4DE04B00F66569 /* WeirdHatCameraViewController.swift in Sources */,
 				4F4292EF2A4DE04B00F66569 /* AppDelegate.swift in Sources */,
 				4F4292F12A4DE04B00F66569 /* SceneDelegate.swift in Sources */,

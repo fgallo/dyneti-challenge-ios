@@ -5,12 +5,14 @@
 import Foundation
 import AVFoundation
 
-final class AVCaptureSessionCameraPreview {
+final class AVCaptureSessionCameraPreview: NSObject {
     private let captureSession: AVCaptureSession
     private let deviceTypes: [AVCaptureDevice.DeviceType]
     private var position: AVCaptureDevice.Position
     
     lazy var previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+    
+    var onImageCapture: ((CVImageBuffer) -> Void)?
     
     init(position: AVCaptureDevice.Position = .front) {
         self.captureSession = AVCaptureSession()
@@ -71,12 +73,19 @@ extension AVCaptureSessionCameraPreview {
     private func addOutput() throws {
         let output = AVCaptureVideoDataOutput()
         output.videoSettings = [(kCVPixelBufferPixelFormatTypeKey as NSString): NSNumber(value: kCVPixelFormatType_32BGRA)] as [String: Any]
+        output.setSampleBufferDelegate(self, queue: DispatchQueue(label: "camera_processing_queue"))
         
         if captureSession.canAddOutput(output) {
             captureSession.addOutput(output)
         } else {
             throw NSError(domain: "Error when adding output.", code: 0)
         }
+        
+        guard let connection = output.connection(with: .video), connection.isVideoOrientationSupported else {
+            throw NSError(domain: "Error when adding output.", code: 0)
+        }
+        
+        connection.videoOrientation = .portrait
     }
     
     private func removeOutput() {
@@ -89,5 +98,17 @@ extension AVCaptureSessionCameraPreview {
         removeInput()
         removeOutput()
     }
-    
+}
+
+
+// MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
+
+extension AVCaptureSessionCameraPreview: AVCaptureVideoDataOutputSampleBufferDelegate {
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+            return
+        }
+        
+        onImageCapture?(imageBuffer)
+    }
 }
