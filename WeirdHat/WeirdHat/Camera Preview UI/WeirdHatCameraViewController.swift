@@ -24,6 +24,14 @@ class WeirdHatCameraViewController: UIViewController {
         cameraPreview.previewLayer.frame = view.frame
         view.layer.insertSublayer(cameraPreview.previewLayer, at: 0)
     }
+    
+    @IBAction private func flipCameraButttonTapped(_ sender: UIButton) {
+        do {
+            try cameraPreview.flipCamera()
+        } catch {
+            showAlert(with: error)
+        }
+    }
 }
 
 extension WeirdHatCameraViewController {

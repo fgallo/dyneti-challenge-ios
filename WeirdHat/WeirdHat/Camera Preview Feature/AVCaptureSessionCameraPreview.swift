@@ -5,11 +5,6 @@
 import Foundation
 import AVFoundation
 
-enum CameraPreviewSource {
-    case back
-    case front
-}
-
 final class AVCaptureSessionCameraPreview {
     private let captureSession: AVCaptureSession
     private let deviceTypes: [AVCaptureDevice.DeviceType]
@@ -23,8 +18,9 @@ final class AVCaptureSessionCameraPreview {
         self.deviceTypes = [.builtInTrueDepthCamera, .builtInDualCamera, .builtInWideAngleCamera]
     }
     
-    func setSource(_ source: CameraPreviewSource) {
-        position = source.toPosition()
+    func flipCamera() throws {
+        position = position == .back ? .front : .back
+        try configureInputAndOutput()
     }
     
     func configureInputAndOutput() throws {
@@ -94,13 +90,4 @@ extension AVCaptureSessionCameraPreview {
         removeOutput()
     }
     
-}
-
-extension CameraPreviewSource {
-    func toPosition() -> AVCaptureDevice.Position {
-        switch self {
-        case .back: return AVCaptureDevice.Position.back
-        case .front: return AVCaptureDevice.Position.front
-        }
-    }
 }
