@@ -10,7 +10,9 @@ final class WeirdHatCameraViewController: UIViewController {
     @IBOutlet private(set) var infoButton: UIButton!
     
     var cameraPreview: AVCaptureSessionCameraPreview!
+    
     var onTakePicture: (() -> Void)?
+    var onFlipCamera: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +30,7 @@ final class WeirdHatCameraViewController: UIViewController {
     }
     
     @IBAction private func flipCameraButttonTapped(_ sender: UIButton) {
-        do {
-            try cameraPreview.flipCamera()
-        } catch {
-            showAlert(with: error)
-        }
+        onFlipCamera?()
     }
     
     @IBAction private func takePictureButtonTapped(_ sender: UIButton) {

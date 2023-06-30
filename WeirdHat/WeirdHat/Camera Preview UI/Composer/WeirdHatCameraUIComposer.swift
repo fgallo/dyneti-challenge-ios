@@ -31,6 +31,17 @@ final class WeirdHatCameraUIComposer {
             }
         }
         
+        weirdHatCameraViewController.onFlipCamera = {
+            DispatchQueue.main.async {
+                do {
+                    try cameraPreview.flipCamera()
+                    imageModel.removeImagesFromSuperview()
+                } catch {
+                    weirdHatCameraViewController.showAlert(with: error)
+                }
+            }
+        }
+        
         weirdHatCameraViewController.onTakePicture = {
             guard let imageBuffer = cameraPreview.lastImageBuffer else {
                 return
