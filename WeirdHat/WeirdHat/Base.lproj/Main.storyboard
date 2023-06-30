@@ -39,6 +39,9 @@
                                 <rect key="frame" x="40" y="783.33333333333337" width="49.666666666666657" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="infoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EBT-G9-Rzs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,11 +67,75 @@
             </objects>
             <point key="canvasLocation" x="140" y="4"/>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="hLU-27-RhG">
+            <objects>
+                <viewController storyboardIdentifier="InfoViewController" id="pFv-Yv-b1I" customClass="InfoViewController" customModule="WeirdHat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ae-mc-Xin">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMk-By-71q">
+                                <rect key="frame" x="143" y="75" width="107" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuO-Mi-h0b">
+                                <rect key="frame" x="16.000000000000004" y="70" width="41.333333333333343" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="xmark" catalog="system" symbolScale="medium"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="pFv-Yv-b1I" eventType="touchUpInside" id="eqF-PH-Vs7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agD-Gr-WWI">
+                                <rect key="frame" x="16" y="128.33333333333334" width="361" height="324.66666666666663"/>
+                                <string key="text">This is an AR app. With this app you can put a weird hat on your friends' or your own head.
+
+Simply aim your camera at a face, and watch as the magic unfolds! The app instantly detects faces and seamlessly places the hats.
+
+But that's not all! If you're surrounded by a group of friends or colleagues, the app intelligently recognizes multiple faces and ensures that everyone gets their own unique hat.
+
+Take pictures to save these memories to your gallery, so you can revisit them and share with others!
+
+Enjoy!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s2i-JQ-HV6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FMk-By-71q" firstAttribute="top" secondItem="s2i-JQ-HV6" secondAttribute="top" constant="16" id="8vr-xa-98P"/>
+                            <constraint firstItem="agD-Gr-WWI" firstAttribute="leading" secondItem="s2i-JQ-HV6" secondAttribute="leading" constant="16" id="Cgw-2w-afO"/>
+                            <constraint firstItem="s2i-JQ-HV6" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="agD-Gr-WWI" secondAttribute="bottom" constant="24" id="GXw-yT-Evm"/>
+                            <constraint firstItem="agD-Gr-WWI" firstAttribute="top" secondItem="EuO-Mi-h0b" secondAttribute="bottom" constant="24" id="Hen-BU-0n3"/>
+                            <constraint firstItem="EuO-Mi-h0b" firstAttribute="leading" secondItem="s2i-JQ-HV6" secondAttribute="leading" constant="16" id="X53-Hp-o0C"/>
+                            <constraint firstItem="FMk-By-71q" firstAttribute="centerX" secondItem="2ae-mc-Xin" secondAttribute="centerX" id="Yy1-b9-OP9"/>
+                            <constraint firstItem="FMk-By-71q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EuO-Mi-h0b" secondAttribute="trailing" id="i5R-MD-Pit"/>
+                            <constraint firstItem="EuO-Mi-h0b" firstAttribute="centerY" secondItem="FMk-By-71q" secondAttribute="centerY" id="vzA-q6-Bk5"/>
+                            <constraint firstItem="s2i-JQ-HV6" firstAttribute="trailing" secondItem="agD-Gr-WWI" secondAttribute="trailing" constant="16" id="xAX-S4-hit"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58p-ew-WHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="4"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.triangle.2.circlepath.camera" catalog="system" width="128" height="93"/>
         <image name="circle.inset.filled" catalog="system" width="128" height="123"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

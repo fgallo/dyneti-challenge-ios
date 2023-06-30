@@ -21,6 +21,7 @@
 		4FC64C0E2A4F094900F5C0A3 /* PHPhotoLibraryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C0D2A4F094900F5C0A3 /* PHPhotoLibraryHelper.swift */; };
 		4FC64C102A4F19F700F5C0A3 /* HatImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C0F2A4F19F700F5C0A3 /* HatImageController.swift */; };
 		4FC64C122A4F1D0500F5C0A3 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C112A4F1D0500F5C0A3 /* UIViewController+Alert.swift */; };
+		4FC64C172A4F246C00F5C0A3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C162A4F246C00F5C0A3 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4FC64C0D2A4F094900F5C0A3 /* PHPhotoLibraryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPhotoLibraryHelper.swift; sourceTree = "<group>"; };
 		4FC64C0F2A4F19F700F5C0A3 /* HatImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatImageController.swift; sourceTree = "<group>"; };
 		4FC64C112A4F1D0500F5C0A3 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		4FC64C162A4F246C00F5C0A3 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				4FC64BFF2A4E2E3E00F5C0A3 /* Camera Preview Feature */,
 				4FC64C082A4E73CD00F5C0A3 /* Capture Photo Feature */,
 				4FC64C022A4E2E9100F5C0A3 /* Camera Preview UI */,
+				4FC64C152A4F245A00F5C0A3 /* Info UI */,
 				4FC64C0C2A4F093400F5C0A3 /* Helpers */,
 				4F4292EE2A4DE04B00F66569 /* AppDelegate.swift */,
 				4F4292F02A4DE04B00F66569 /* SceneDelegate.swift */,
@@ -172,6 +175,14 @@
 				4FC64C0F2A4F19F700F5C0A3 /* HatImageController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4FC64C152A4F245A00F5C0A3 /* Info UI */ = {
+			isa = PBXGroup;
+			children = (
+				4FC64C162A4F246C00F5C0A3 /* InfoViewController.swift */,
+			);
+			path = "Info UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FC64C012A4E2E5100F5C0A3 /* AVCaptureSessionCameraPreview.swift in Sources */,
+				4FC64C172A4F246C00F5C0A3 /* InfoViewController.swift in Sources */,
 				4FC64C0A2A4E743700F5C0A3 /* CapturePhotoHelper.swift in Sources */,
 				4FC64C042A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift in Sources */,
 				4FC64C072A4E357200F5C0A3 /* VisionFaceRecognition.swift in Sources */,

@@ -51,6 +51,10 @@ final class WeirdHatCameraUIComposer {
                                                 hatImageViews: imageModel.imageViews,
                                                 flip: cameraPreview.isFlipped)
         }
+        
+        weirdHatCameraViewController.onInfo = {
+            weirdHatCameraViewController.present(makeInfoViewController(), animated: true)
+        }
 
         return weirdHatCameraViewController
     }
@@ -62,5 +66,12 @@ extension WeirdHatCameraUIComposer {
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
         let weirdHatCameraViewController = storyboard.instantiateInitialViewController() as! WeirdHatCameraViewController
         return weirdHatCameraViewController
+    }
+    
+    private static func makeInfoViewController() -> InfoViewController {
+        let bundle = Bundle(for: InfoViewController.self)
+        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+        let infoViewController = storyboard.instantiateViewController(withIdentifier: String(describing: InfoViewController.self)) as! InfoViewController
+        return infoViewController
     }
 }
