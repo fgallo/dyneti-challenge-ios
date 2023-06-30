@@ -27,8 +27,11 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
-                                            <imageReference key="image" image="circle.inset.filled" catalog="system" symbolScale="large" variableValue="0.60000000000000009"/>
+                                            <imageReference key="image" image="circle.inset.filled" catalog="system" symbolScale="large"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="takePictureButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3kP-hZ-tw1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKl-uY-H5V">
                                         <rect key="frame" x="297.33333333333331" y="60.666666666666629" width="55.666666666666686" height="35"/>

@@ -68,6 +68,16 @@ class WeirdHatCameraViewController: UIViewController {
             showAlert(with: error)
         }
     }
+    
+    @IBAction private func takePictureButtonTapped(_ sender: UIButton) {
+        guard let imageBuffer = cameraPreview.lastImageBuffer else {
+            return
+        }
+        
+        CapturePhotoHelper.capturePhotoFrom(imageBuffer: imageBuffer,
+                                            hatImageViews: model,
+                                            flip: cameraPreview.isFlipped)
+    }
 }
 
 extension WeirdHatCameraViewController {

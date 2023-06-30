@@ -10,9 +10,14 @@ final class AVCaptureSessionCameraPreview: NSObject {
     private let deviceTypes: [AVCaptureDevice.DeviceType]
     private var position: AVCaptureDevice.Position
     
+    var lastImageBuffer: CVImageBuffer?
+    var onImageCapture: ((CVImageBuffer) -> Void)?
+    
     lazy var previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
     
-    var onImageCapture: ((CVImageBuffer) -> Void)?
+    var isFlipped: Bool {
+        position == .front
+    }
     
     init(position: AVCaptureDevice.Position = .front) {
         self.captureSession = AVCaptureSession()
@@ -108,6 +113,8 @@ extension AVCaptureSessionCameraPreview: AVCaptureVideoDataOutputSampleBufferDel
         guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
             return
         }
+        
+        lastImageBuffer = imageBuffer
         
         onImageCapture?(imageBuffer)
     }
