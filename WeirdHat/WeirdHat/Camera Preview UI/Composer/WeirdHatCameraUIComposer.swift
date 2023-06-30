@@ -8,8 +8,13 @@ final class WeirdHatCameraUIComposer {
     private init() {}
     
     static func weirdHatCameraComposedWith() -> WeirdHatCameraViewController {
+        let capturePhotoHelper = CapturePhotoHelper()
         let cameraPreview = AVCaptureSessionCameraPreview()
         let imageModel = HatImageController(imageViews: [], cameraPreview: cameraPreview)
+        
+        let weirdHatCameraViewController = makeWeirdHatCameraViewController()
+        weirdHatCameraViewController.cameraPreview = cameraPreview
+        imageModel.view = weirdHatCameraViewController.view
         
         cameraPreview.onImageCapture = { image in
             VisionFaceRecognition.detectFace(image: image) { result in
@@ -26,13 +31,21 @@ final class WeirdHatCameraUIComposer {
             }
         }
         
-        let weirdHatCameraViewController = makeWeirdHatCameraViewController()
-        weirdHatCameraViewController.cameraPreview = cameraPreview
-        weirdHatCameraViewController.imageModel = imageModel
-        imageModel.view = weirdHatCameraViewController.view
+        weirdHatCameraViewController.onTakePicture = {
+            guard let imageBuffer = cameraPreview.lastImageBuffer else {
+                return
+            }
+            
+            capturePhotoHelper.capturePhotoFrom(imageBuffer: imageBuffer,
+                                                hatImageViews: imageModel.imageViews,
+                                                flip: cameraPreview.isFlipped)
+        }
+
         return weirdHatCameraViewController
     }
-    
+}
+
+extension WeirdHatCameraUIComposer {
     private static func makeWeirdHatCameraViewController() -> WeirdHatCameraViewController {
         let bundle = Bundle(for: WeirdHatCameraViewController.self)
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)

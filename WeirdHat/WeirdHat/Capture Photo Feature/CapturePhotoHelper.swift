@@ -5,8 +5,8 @@
 import UIKit
 import CoreImage
 
-class CapturePhotoHelper {
-    static func capturePhotoFrom(imageBuffer: CVImageBuffer, hatImageViews: [UIImageView], flip: Bool) {
+final class CapturePhotoHelper {
+    func capturePhotoFrom(imageBuffer: CVImageBuffer, hatImageViews: [UIImageView], flip: Bool) {
         let sourceImage = CIImage(cvPixelBuffer: imageBuffer)
         
         guard let sourceImageResized = resizeCIImage(sourceImage) else {
@@ -20,7 +20,7 @@ class CapturePhotoHelper {
         }
     }
     
-    static func mergeImages(bottomImage: UIImage, topImageViews: [UIImageView]) -> UIImage? {
+    private func mergeImages(bottomImage: UIImage, topImageViews: [UIImageView]) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(bottomImage.size, false, 0.0)
         bottomImage.draw(in: CGRect(x: 0, y: 0, width: bottomImage.size.width, height: bottomImage.size.height))
         
@@ -39,7 +39,7 @@ class CapturePhotoHelper {
         return mergedImage
     }
 
-    static func resizeCIImage(_ ciImage: CIImage) -> CIImage? {
+    private func resizeCIImage(_ ciImage: CIImage) -> CIImage? {
         let targetSize = UIScreen.main.bounds
         let imageSize = ciImage.extent.size
         

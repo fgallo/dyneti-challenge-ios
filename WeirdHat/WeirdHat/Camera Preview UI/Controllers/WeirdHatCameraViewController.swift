@@ -4,13 +4,13 @@
 
 import UIKit
 
-class WeirdHatCameraViewController: UIViewController {
+final class WeirdHatCameraViewController: UIViewController {
     @IBOutlet private(set) var takePictureButton: UIButton!
     @IBOutlet private(set) var flipCameraButton: UIButton!
     @IBOutlet private(set) var infoButton: UIButton!
     
     var cameraPreview: AVCaptureSessionCameraPreview!
-    var imageModel: HatImageController!
+    var onTakePicture: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +36,7 @@ class WeirdHatCameraViewController: UIViewController {
     }
     
     @IBAction private func takePictureButtonTapped(_ sender: UIButton) {
-        guard let imageBuffer = cameraPreview.lastImageBuffer else {
-            return
-        }
-        
-        CapturePhotoHelper.capturePhotoFrom(imageBuffer: imageBuffer,
-                                            hatImageViews: imageModel.imageViews,
-                                            flip: cameraPreview.isFlipped)
+        onTakePicture?()
     }
 }
 

@@ -4,7 +4,7 @@
 
 import Vision
 
-class VisionFaceRecognition {
+final class VisionFaceRecognition {
     static func detectFace(image: CVPixelBuffer, completion: @escaping (Result<[CGRect], Error>) -> Void) {
         let faceDetectionRequest = VNDetectFaceLandmarksRequest { request, error in
             if let results = request.results as? [VNFaceObservation], !results.isEmpty {

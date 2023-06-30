@@ -4,7 +4,7 @@
 
 import UIKit
 
-class HatImageController {
+final class HatImageController {
     weak var view: UIView?
     
     var imageViews: [UIImageView]
