@@ -126,9 +126,8 @@
 		4FC64C022A4E2E9100F5C0A3 /* Camera Preview UI */ = {
 			isa = PBXGroup;
 			children = (
-				4FC64C032A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift */,
-				4F4292F22A4DE04B00F66569 /* WeirdHatCameraViewController.swift */,
-				4FC64C0F2A4F19F700F5C0A3 /* HatImageController.swift */,
+				4FC64C132A4F203C00F5C0A3 /* Composer */,
+				4FC64C142A4F204000F5C0A3 /* Controllers */,
 			);
 			path = "Camera Preview UI";
 			sourceTree = "<group>";
@@ -156,6 +155,23 @@
 				4FC64C112A4F1D0500F5C0A3 /* UIViewController+Alert.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4FC64C132A4F203C00F5C0A3 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				4FC64C032A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift */,
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
+		4FC64C142A4F204000F5C0A3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F4292F22A4DE04B00F66569 /* WeirdHatCameraViewController.swift */,
+				4FC64C0F2A4F19F700F5C0A3 /* HatImageController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
