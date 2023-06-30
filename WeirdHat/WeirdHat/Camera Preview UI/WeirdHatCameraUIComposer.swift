@@ -9,9 +9,27 @@ final class WeirdHatCameraUIComposer {
     
     static func weirdHatCameraComposedWith() -> WeirdHatCameraViewController {
         let cameraPreview = AVCaptureSessionCameraPreview()
+        let imageModel = HatImageController(imageViews: [], cameraPreview: cameraPreview)
+        
+        cameraPreview.onImageCapture = { image in
+            VisionFaceRecognition.detectFace(image: image) { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case let .success(results):
+                        imageModel.removeImagesFromSuperview()
+                        imageModel.createHatImageView(withRects: results)
+                        imageModel.addImagesToView()
+                    case .failure:
+                        imageModel.removeImagesFromSuperview()
+                    }
+                }
+            }
+        }
         
         let weirdHatCameraViewController = makeWeirdHatCameraViewController()
         weirdHatCameraViewController.cameraPreview = cameraPreview
+        weirdHatCameraViewController.imageModel = imageModel
+        imageModel.view = weirdHatCameraViewController.view
         return weirdHatCameraViewController
     }
     

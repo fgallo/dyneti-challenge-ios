@@ -19,6 +19,8 @@
 		4FC64C072A4E357200F5C0A3 /* VisionFaceRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C062A4E357200F5C0A3 /* VisionFaceRecognition.swift */; };
 		4FC64C0A2A4E743700F5C0A3 /* CapturePhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C092A4E743700F5C0A3 /* CapturePhotoHelper.swift */; };
 		4FC64C0E2A4F094900F5C0A3 /* PHPhotoLibraryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C0D2A4F094900F5C0A3 /* PHPhotoLibraryHelper.swift */; };
+		4FC64C102A4F19F700F5C0A3 /* HatImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C0F2A4F19F700F5C0A3 /* HatImageController.swift */; };
+		4FC64C122A4F1D0500F5C0A3 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64C112A4F1D0500F5C0A3 /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		4FC64C062A4E357200F5C0A3 /* VisionFaceRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionFaceRecognition.swift; sourceTree = "<group>"; };
 		4FC64C092A4E743700F5C0A3 /* CapturePhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePhotoHelper.swift; sourceTree = "<group>"; };
 		4FC64C0D2A4F094900F5C0A3 /* PHPhotoLibraryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPhotoLibraryHelper.swift; sourceTree = "<group>"; };
+		4FC64C0F2A4F19F700F5C0A3 /* HatImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatImageController.swift; sourceTree = "<group>"; };
+		4FC64C112A4F1D0500F5C0A3 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 			children = (
 				4FC64C032A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift */,
 				4F4292F22A4DE04B00F66569 /* WeirdHatCameraViewController.swift */,
+				4FC64C0F2A4F19F700F5C0A3 /* HatImageController.swift */,
 			);
 			path = "Camera Preview UI";
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				4FC64C0D2A4F094900F5C0A3 /* PHPhotoLibraryHelper.swift */,
+				4FC64C112A4F1D0500F5C0A3 /* UIViewController+Alert.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 				4FC64C042A4E30E500F5C0A3 /* WeirdHatCameraUIComposer.swift in Sources */,
 				4FC64C072A4E357200F5C0A3 /* VisionFaceRecognition.swift in Sources */,
 				4FC64C0E2A4F094900F5C0A3 /* PHPhotoLibraryHelper.swift in Sources */,
+				4FC64C122A4F1D0500F5C0A3 /* UIViewController+Alert.swift in Sources */,
+				4FC64C102A4F19F700F5C0A3 /* HatImageController.swift in Sources */,
 				4F4292F32A4DE04B00F66569 /* WeirdHatCameraViewController.swift in Sources */,
 				4F4292EF2A4DE04B00F66569 /* AppDelegate.swift in Sources */,
 				4F4292F12A4DE04B00F66569 /* SceneDelegate.swift in Sources */,
